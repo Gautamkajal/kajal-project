@@ -1,120 +1,144 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Online Store</title>
+    <title>My Shopping Store</title>
 
     <style>
         body {
+            background-color: #f2f2f2;
             font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: black;
-            color: white;
-            text-align: center;
             padding: 20px;
         }
 
-        nav {
-            background-color: #333;
-            padding: 15px;
+        h1 {
             text-align: center;
+            color: #222;
+            margin-bottom: 30px;
         }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 20px;
-        }
-
-        h2 {
-            text-align: center;
-        }
-
-        .products {
+        .container {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            padding: 20px;
+            flex-wrap: wrap;
+            gap: 25px;
+            max-width: 1000px;
+            margin: auto;
         }
 
-        .product {
+        .card {
+            width: 260px;
             background-color: white;
-            width: 220px;
             padding: 15px;
+            border-radius: 12px;
             text-align: center;
-            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+            transition: 0.3s;
         }
 
-        .product img {
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .product-image {
             width: 100%;
-            height: 200px;
+            height: 190px;
+            object-fit: contain;
+            border-radius: 8px;
         }
 
-        .product button {
-            background-color: green;
+        .card h2 {
+            color: #222;
+            font-size: 21px;
+        }
+
+        .card p {
+            color: gray;
+        }
+
+        .price {
+            color: green;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .buy-button {
+            background-color: #222;
             color: white;
-            padding: 10px;
+            padding: 11px 25px;
             border: none;
+            border-radius: 6px;
             cursor: pointer;
         }
 
-        footer {
-            background-color: black;
-            color: white;
-            text-align: center;
-            padding: 15px;
+        .buy-button:hover {
+            background-color: orange;
+            color: black;
         }
+
     </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>My Online Store</h1>
-        <p>Welcome to our E-commerce Website</p>
-    </header>
+    <h1>My Shopping Store</h1>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Products</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-    </nav>
+    <div class="container">
 
-    <h2>Our Products</h2>
+        <!-- FIRST ROW -->
 
-    <div class="products">
-
-        <div class="product">
-        <img src="https://contents.mediadecathlon.com/p2819190/4c689ea7679c2eaa03c610b3e2374416/p2819190.jpg" alt="shoes">
-            <h3>Shoes</h3>
-            <p>Price: ₹999</p>
-            <button>Add to Cart</button>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400" class="product-image">
+            <h2>Headphones</h2>
+            <p>Wireless Bluetooth Headphones</p>
+            <h3 class="price">₹1,499</h3>
+            <button class="buy-button">Buy Now</button>
         </div>
 
-        <div class="product">
-            <img src="https://m.media-amazon.com/images/I/81+d6eSA0eL._SY679_.jpg" alt="Shoes">
-
-            <h3>Watch</h3>
-            <p>Price: ₹1499</p>
-            <button>Add to Cart</button>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400" class="product-image">
+            <h2>Smart Watch</h2>
+            <p>Stylish Digital Smart Watch</p>
+            <h3 class="price">₹1,999</h3>
+            <button class="buy-button">Buy Now</button>
         </div>
 
-        <div class="product">
-            <img src="https://imgs.search.brave.com/oXa_1_iJmt6cu8eaZR3HW41nfCUvwtPMfnPA4e-DHgI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bGlub3BlcnJvcy5j/b20vY2RuL3Nob3Av/ZmlsZXMvTFdTTDAw/NTU5VEFVUEUtMi53/ZWJwP3Y9MTc4NzEz/MTAyMyZ3aWR0aD0z/ODQw" alt="Bag">
-            <h3>Bag</h3>
-            <p>Price: ₹799</p>
-            <button>Add to Cart</button>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400" class="product-image">
+            <h2>Wireless Earphones</h2>
+            <p>High Quality Sound</p>
+            <h3 class="price">₹999</h3>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+
+        <!-- SECOND ROW -->
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=400" class="product-image">
+            <h2>Camera</h2>
+            <p>Digital Photography Camera</p>
+            <h3 class="price">₹4,999</h3>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1527814050087-3793815479db?w=400" class="product-image">
+            <h2>Wireless Mouse</h2>
+            <p>Comfortable Computer Mouse</p>
+            <h3 class="price">₹799</h3>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400" class="product-image">
+            <h2>Sports Shoes</h2>
+            <p>Comfortable Running Shoes</p>
+            <h3 class="price">₹2,499</h3>
+            <button class="buy-button">Buy Now</button>
         </div>
 
     </div>
-
-    <footer>
-        <p>© 2026 My Online Store</p>
-    </footer>
 
 </body>
 </html>
